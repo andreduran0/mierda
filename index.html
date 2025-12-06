@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Huaraz Explorer</title>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <script>
-        // Basic theme handling
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
         } else {
@@ -20,9 +20,9 @@
             theme: {
                 extend: {
                     colors: {
-                        "brand-green": "#13ec5b", // Home primary
-                        "brand-orange": "#F58220", // Map primary
-                        "brand-blue": "#00a8e8",   // Detail primary
+                        "brand-green": "#13ec5b",
+                        "brand-orange": "#F58220",
+                        "brand-blue": "#00a8e8",
                         "brand-dark-blue": "#2A4D69",
                         "brand-accent": "#ffc107",
                         "background-light": "#f6f8f6",
@@ -38,14 +38,9 @@
                     },
                 },
             },
-        }
+        };
     </script>
-    <style>
-        body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-    </style>
+
     <script type="importmap">
 {
   "imports": {
@@ -58,10 +53,13 @@
     "qrcode": "https://aistudiocdn.com/qrcode@^1.5.3"
   }
 }
-</script>
+    </script>
+
+    <!-- ESTE ES EL ARCHIVO CORRECTO QUE DEBES IMPORTAR -->
+    <script type="module" src="./index.tsx"></script>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
